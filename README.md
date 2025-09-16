@@ -17,3 +17,11 @@ All code is provided as Jupyter notebooks so you can run the full workflow inter
     - Vanilla: directly ask for lower/upper bounds at confidence level c.
     - CoT: same, with step-by-step reasoning requested.
   - Sampling strategy: multiple runs per question to capture stochasticity (“self-random”).
+2- Refinement (optional)
+  - Aggregation: Mean (MIA), Length-Weighted (LWA), Inverse-Length-Weighted (iLWA), Union, and Confidence-Weighted (CWA).
+  - Self-refinement: show the model several of its intervals, have it choose the most plausible and optionally propose a new interval.
+3- Evaluation:
+  - hit@c: empirical coverage vs. imposed confidence.
+  - Correlation between requested confidence and produced interval length.
+  - Deviation Score (DS): how far misses fall outside the interval.
+  - Interval Length Score (ILS): interval width normalized by scale.  
